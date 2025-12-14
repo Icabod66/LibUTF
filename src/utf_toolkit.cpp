@@ -53,7 +53,7 @@
 //  
 //          Examples of this permissiveness include: handling of overlong and extended UTF8 encodings; isolated
 //          unicode surrogates are not treated as errors; the full UCS4 character range is allowed for UTF8 and
-//          UTF32; full 32-bit values can be read from and written to UTF32; and non-standard compatibility
+//          UTF32; 31-bit values can be read from and written to UTF8 and UTF32; and non-standard compatibility
 //          formats are supported (JCESU8 and CESU32).
 //  
 //      Non-decodable encoding sequences:
