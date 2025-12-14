@@ -27,6 +27,8 @@ Makefile
 *.vcxproj
 *.vcxproj.user
 *.vcxproj.filters
+
+# Visual Studio build output
 x64/
 
 # Xcode
