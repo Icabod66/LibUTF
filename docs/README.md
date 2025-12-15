@@ -27,7 +27,7 @@ self-contained for performance and correctness reasons.
   - README.md  
     Overview of the documentation structure and how the pieces fit.
 
-  - History.md
+  - History.md  
     The origins and development history of this library.
 
   - unicode/

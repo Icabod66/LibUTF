@@ -123,7 +123,7 @@ UTF_TYPE identifies the primary UTF encodings. UTF_TYPE::OTHER indicates a
 non-UTF or unknown encoding and defaults to Java-style UTF-8 unless a specific
 UTF_OTHER_TYPE is selected.
 
-Note on wchar_t
+A note on wchar_t:
 
 The utf_std layer does not treat wchar_t as a Unicode encoding. The meaning
 and width of wchar_t are implementation-defined and vary by platform.

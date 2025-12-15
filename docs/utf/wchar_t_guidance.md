@@ -7,14 +7,14 @@ meaning, and how to handle it safely when using LibUTF. It is intended as
 engineering guidance, not a standards compliance or conformance document.
 
 The focus is on clarifying how wchar_t is commonly used, why it does not map
-cleanly to Unicode characters, and how LibUTF handles such data when it must be
-supported.
+cleanly to Unicode characters, and how LibUTF approaches such data when it must
+be supported.
 
 ## Framing and takeaway
 
-This document assumes familiarity with the design intent of the LibUTF
-standard and toolkit layers. See std_overview.md and
-toolkit_overview.md for background on their respective roles.
+Some familiarity with the design intent of the LibUTF standard and toolkit
+layers is assumed. See std_overview.md and toolkit_overview.md for background
+on their respective roles.
 
 The key points to keep in mind are:
 
