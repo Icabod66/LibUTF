@@ -64,6 +64,18 @@ In typical usage, applications select an encoding model by choosing a
 function calls are primarily used when per-call policy control is required or
 when building higher-level parsers and scanners.
 
+### wchar_t and platform data
+
+In practice, wchar_t frequently appears at platform or legacy boundaries.
+Its size and interpretation are implementation-defined and should not be
+assumed to represent a specific Unicode encoding.
+
+When wchar_t data must be processed, the utf_toolkit layer is generally
+the safer choice due to its explicit validation and diagnostic reporting.
+
+Detailed guidance on handling wchar_t with LibUTF can be found in
+docs/utf/wchar_t_guidance.md.
+
 ## Core data model: utf_text
 
 Both layers use `unicode::utf::utf_text` to represent an encoded text stream:

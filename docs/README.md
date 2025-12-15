@@ -27,7 +27,7 @@ self-contained for performance and correctness reasons.
   - README.md  
     Overview of the documentation structure and how the pieces fit.
 
-  - history.md
+  - History.md
     The origins and development history of this library.
 
   - unicode/
@@ -60,6 +60,9 @@ self-contained for performance and correctness reasons.
     - overlong_utf8.md  
       Overlong UTF-8 encodings, including rationale, risks, and supported use
       cases.
+
+    - wchar_t_guidance.md  
+      Guidance on handling wchar_t data when using LibUTF.
 
     - utf_helpers.md  
       Small helper predicates and utility functions used internally and by
