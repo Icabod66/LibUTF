@@ -5,9 +5,6 @@
 Use the following guide to decide which class of UTF or Unicode library best
 fits your needs.
 
-In LibUTF, strict handling means adherence to the UTF standard, with any
-deviation treated as a failure rather than silently corrected.
-
 - If you want Unicode text to "just work" and do not need control over encoding
   or diagnostics at a low level,
   use the facilities provided by your language runtime.
