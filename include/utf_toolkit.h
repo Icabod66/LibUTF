@@ -255,6 +255,22 @@ public:
     constexpr [[nodiscard]] bool error() const noexcept { return any(ErrorsMask); }
     constexpr [[nodiscard]] bool no_error() const noexcept { return !error(); }
     constexpr [[nodiscard]] bool buffer_error() const noexcept { return any(BufferErrorsMask); }
+    constexpr [[nodiscard]] bool is_rune_value() const noexcept { return none(ScalarDisallowedMask); }
+    constexpr [[nodiscard]] bool is_strict_rune(const UTF_SUB_TYPE utfSubType) const noexcept
+    {
+        switch (utfSubType) {
+            case UTF_SUB_TYPE::UTF8ns:
+            case UTF_SUB_TYPE::UTF8st:
+            case UTF_SUB_TYPE::UTF32le:
+            case UTF_SUB_TYPE::UTF32be:
+                return none(NonUTF16RuneDisallowedMask);
+            case UTF_SUB_TYPE::UTF16le:
+            case UTF_SUB_TYPE::UTF16be:
+                return none(UTF16RuneDisallowedMask);
+            default:
+                return false;
+        }
+    }
     constexpr [[nodiscard]] bool use_replacement_character() const noexcept { return any(UseReplacementCharacterMask); }
     constexpr [[nodiscard]] cp_errors errors_only() const noexcept { return cp_errors(state & ErrorsMask); }
     constexpr [[nodiscard]] cp_errors warnings_only() const noexcept { return cp_errors(state & WarningsMask); }
@@ -275,11 +291,15 @@ private:
         U(bits::NonCharacter) | U(bits::TruncatedPair) | U(bits::SurrogatePair) | U(bits::HighSurrogate) |
         U(bits::LowSurrogate) | U(bits::DelimitString) | U(bits::IrregularForm) | U(bits::ModifiedUTF8) |
         U(bits::OverlongUTF8) | U(bits::ExtendedUTF8);
-
     static constexpr underlying_type ReservedMask = U(bits::ReservedBit3) | U(bits::ReservedBit2) | U(bits::ReservedBit1) | U(bits::ReservedBit1);
     static constexpr underlying_type NonReservedMask = ~ReservedMask;
     static constexpr underlying_type ByteIndexMask = U(bits::ReservedBit2) | U(bits::ReservedBit1) | U(bits::ReservedBit0);
     static constexpr underlying_type BufferErrorsMask = U(bits::InvalidBuffer) | U(bits::InvalidOffset) | U(bits::MisalignedOffset) | U(bits::MisalignedLength);
+    static constexpr underlying_type ScalarDisallowedMask = ~(
+        U(bits::Supplementary) | U(bits::NonCharacter) | U(bits::SurrogatePair) |
+        U(bits::IrregularForm) | U(bits::ModifiedUTF8) | U(bits::OverlongUTF8) | U(bits::ExtendedUTF8));
+    static constexpr underlying_type UTF16RuneDisallowedMask = ~(U(bits::Supplementary) | U(bits::NonCharacter) | U(bits::SurrogatePair));
+    static constexpr underlying_type NonUTF16RuneDisallowedMask = ~(U(bits::Supplementary) | U(bits::NonCharacter));
     static constexpr underlying_type UseReplacementCharacterMask = U(bits::NotDecodable) | U(bits::NonCharacter) | U(bits::IrregularForm);
 #undef U
 };
