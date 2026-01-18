@@ -23,7 +23,7 @@ namespace unicode
 {
 
 /// unicode data type
-typedef int32_t unicode_t;
+using unicode_t = int32_t;
 
 };  //  namespace unicode
 
