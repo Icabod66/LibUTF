@@ -1,11 +1,11 @@
 # File: docs/README.md
 
-# LibUTF Documentation Index
+# SuiteUTF Documentation Index
 
-This directory contains the authoritative documentation for the LibUTF
+This directory contains the authoritative documentation for the SuiteUTF
 library.
 
-LibUTF provides low-level, explicit handling of Unicode and UTF-encoded text.
+SuiteUTF provides low-level, explicit handling of Unicode and UTF-encoded text.
 It is not a text layout, font rendering, or high-level Unicode transformation
 library. Its focus is correctness, transparency, and control over encoding and
 decoding behavior.
@@ -42,7 +42,7 @@ self-contained for performance and correctness reasons.
       encoding, diagnostics, and policy requirements.
       
     - when_to_use_libutf.md  
-      Situations where LibUTF is a good fit, and cases where other UTF libraries
+      Situations where SuiteUTF is a good fit, and cases where other UTF libraries
       may be more appropriate.
       
     - std_overview.md  
@@ -70,10 +70,10 @@ self-contained for performance and correctness reasons.
       cases.
 
     - wchar_t_guidance.md  
-      Guidance on handling wchar_t data when using LibUTF.
+      Guidance on handling wchar_t data when using SuiteUTF.
 
     - rune_handling.md  
-      How LibUTF handles Unicode scalar values (runes) during encoding and
+      How SuiteUTF handles Unicode scalar values (runes) during encoding and
       decoding, including strict and toolkit behavior.
 
     - utf_helpers.md  
@@ -96,13 +96,13 @@ self-contained for performance and correctness reasons.
 
   - comparisons/  
     - tinyutf8_comparison.md  
-      UTF-8 policy and diagnostic differences between tinyutf8 and LibUTF.
+      UTF-8 policy and diagnostic differences between tinyutf8 and SuiteUTF.
 
 ---
 
 ## How to approach the documentation
 
-If you are new to LibUTF, the recommended reading order is:
+If you are new to SuiteUTF, the recommended reading order is:
 
 1) unicode/unicode_overview.md  
    Introduces Unicode concepts and classification used by the library. This
@@ -111,12 +111,12 @@ If you are new to LibUTF, the recommended reading order is:
 
 2) utf/std_overview.md  
    Describes strict UTF processing, error conventions, and the design goals of
-   the standard layer. This establishes the core mental model for LibUTF.
+   the standard layer. This establishes the core mental model for SuiteUTF.
 
 3) utf/handlers_usage.md  
    Shows how most users interact with the library via handler abstractions.
 
-At this point, many users will have all the information they need to use LibUTF
+At this point, many users will have all the information they need to use SuiteUTF
 effectively.
 
 ---

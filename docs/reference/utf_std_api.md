@@ -1,6 +1,6 @@
 // File: docs/reference/utf_std_api.md
 
-# LibUTF std layer API reference
+# SuiteUTF std layer API reference
 
 This document describes the public API of the `utf_std` layer, grouped by
 category. It does not define new semantics; it reflects the behaviour implied

@@ -1,6 +1,6 @@
-# LibUTF
+# SuiteUTF
 
-LibUTF is a compact suite of UTF encoders and decoders with supporting
+SuiteUTF is a compact suite of UTF encoders and decoders with supporting
 utilities, covering strict compliance, legacy encodings, permissive and
 custom encodings. It supports both fail-fast operation and rich
 diagnostics for analysing, debugging and correcting invalid encodings.
@@ -14,14 +14,14 @@ architecture and was revisited and modernised between 2024 and 2025. Current
 work focuses on documentation, structural clarity, and consolidation of
 long-standing design decisions.
 
-LibUTF is provided as a reference-quality implementation and is not intended to
+SuiteUTF is provided as a reference-quality implementation and is not intended to
 be a full-spectrum Unicode or internationalisation solution.
 
 ---
 
 ## Scope and Intent
 
-LibUTF provides **low-level encoding and decoding of UTF-encoded Unicode**.
+SuiteUTF provides **low-level encoding and decoding of UTF-encoded Unicode**.
 
 It is **not**:
 - a general Unicode manipulation library
@@ -32,7 +32,7 @@ If you require complex Unicode operations (such as case folding, collation,
 normalisation, or locale-aware processing), a different class of library is
 likely more appropriate.
 
-LibUTF is intentionally conservative in scope and is designed to integrate
+SuiteUTF is intentionally conservative in scope and is designed to integrate
 cleanly into larger systems that already impose their own architectural or
 policy constraints.
 
@@ -58,14 +58,14 @@ structure.
 
 ## Library Structure and Components
 
-LibUTF is split into a small number of focused components. The following overview
+SuiteUTF is split into a small number of focused components. The following overview
 is intended as a technical reference for users navigating the codebase.
 
 ---
 
-### `libutf.h`
+### `suite_utf.h`
 
-General umbrella include for all LibUTF public headers.
+General umbrella include for all SuiteUTF public headers.
 
 ---
 
@@ -150,7 +150,7 @@ representation.
 
 This component is **not intended for cryptographic use**.
 
-It is frequently used alongside LibUTF for tasks such as:
+It is frequently used alongside SuiteUTF for tasks such as:
 
 - stable identification of text content
 - lightweight integrity checks
@@ -162,7 +162,7 @@ The implementation is intentionally simple and has no external dependencies.
 
 ## Project Status
 
-LibUTF is published to document a mature internal component and to make it
+SuiteUTF is published to document a mature internal component and to make it
 available for inspection and reuse.
 
 While the codebase is actively maintained, the project should not be interpreted
@@ -174,7 +174,7 @@ with the project’s intended scope.
 
 ## History, Authorship, and Provenance
 
-LibUTF was originally developed by **Ritchie Brannan** between **2010 and 2016**
+SuiteUTF was originally developed by **Ritchie Brannan** between **2010 and 2016**
 as part of a broader game-engine architecture.
 
 Development was resumed between **November 2024 and 2025**, focusing on
@@ -188,7 +188,7 @@ author.
 
 None of the code in this library was written by ChatGPT or any other AI.
 
-LibUTF is the result of long-term, independent development and substantially
+SuiteUTF is the result of long-term, independent development and substantially
 predates its public release. The project was not derived from, nor based on,
 third-party implementations.
 
@@ -199,4 +199,4 @@ A more detailed project history and revision narrative can be found in
 
 ## Licence
 
-LibUTF is released under the MIT License. See `LICENSE.txt` for details.
+SuiteUTF is released under the MIT License. See `LICENSE.txt` for details.

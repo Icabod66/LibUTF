@@ -8,7 +8,7 @@ This document describes a small set of text hashing utilities based on a
 16-bit CCITT CRC and a compact ASCII-hex representation of that CRC.
 
 The functionality described here is a standalone utility that is distributed
-alongside LibUTF for practical reasons. It is commonly useful in the same
+alongside SuiteUTF for practical reasons. It is commonly useful in the same
 contexts as Unicode and UTF tooling, but it is not part of Unicode encoding or
 decoding, and it does not depend on Unicode semantics.
 
@@ -155,7 +155,7 @@ Converting a CRC to an ASCII hash and validating it:
         (void)recovered;
     }
 
-## Used alongside LibUTF
+## Used alongside SuiteUTF
 
 Although independent of Unicode processing, these utilities are often useful
 near UTF-related code. Common uses include generating compact debug tags,

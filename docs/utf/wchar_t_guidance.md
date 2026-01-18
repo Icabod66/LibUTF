@@ -1,18 +1,18 @@
 # docs/utf/wchar_t_guidance.md
 
-# wchar_t guidance for LibUTF
+# wchar_t guidance for SuiteUTF
 
 This document provides pragmatic guidance on wchar_t, its platform-dependent
-meaning, and how to handle it safely when using LibUTF. It is intended as
+meaning, and how to handle it safely when using SuiteUTF. It is intended as
 engineering guidance, not a standards compliance or conformance document.
 
 The focus is on clarifying how wchar_t is commonly used, why it does not map
-cleanly to Unicode characters, and how LibUTF approaches such data when it must
+cleanly to Unicode characters, and how SuiteUTF approaches such data when it must
 be supported.
 
 ## Framing and takeaway
 
-Some familiarity with the design intent of the LibUTF standard and toolkit
+Some familiarity with the design intent of the SuiteUTF standard and toolkit
 layers is assumed. See std_overview.md and toolkit_overview.md for background
 on their respective roles.
 
@@ -22,7 +22,7 @@ The key points to keep in mind are:
 - Its size and interpretation are implementation-defined.
 - It represents code units, not Unicode scalar values.
 - wchar_t is best treated as a boundary or legacy type.
-- LibUTF handles wchar_t safely by decoding it explicitly, not by assuming
+- SuiteUTF handles wchar_t safely by decoding it explicitly, not by assuming
   element-wise semantics.
 
 ## What wchar_t actually represents
@@ -102,9 +102,9 @@ Recommended practices include:
 Using explicit-width types makes encoding assumptions visible and reduces the
 need for platform-specific reasoning.
 
-## How to handle wchar_t with LibUTF
+## How to handle wchar_t with SuiteUTF
 
-LibUTF does not treat wchar_t as a first-class Unicode type. Instead, it expects
+SuiteUTF does not treat wchar_t as a first-class Unicode type. Instead, it expects
 wchar_t buffers to be decoded explicitly based on their effective width and
 context.
 
@@ -116,8 +116,8 @@ scalar values.
 When sizeof(wchar_t) is 2, as is typical on Windows:
 
 - Treat wchar_t* as a sequence of UTF-16 code units.
-- Pass the buffer through LibUTF UTF-16 decode paths.
-- Allow LibUTF to handle surrogate pairs during decoding.
+- Pass the buffer through SuiteUTF UTF-16 decode paths.
+- Allow SuiteUTF to handle surrogate pairs during decoding.
 
 Element-wise processing of wchar_t values as characters is not appropriate.
 
@@ -126,7 +126,7 @@ Element-wise processing of wchar_t values as characters is not appropriate.
 When sizeof(wchar_t) is 4:
 
 - Treat wchar_t values as UTF-32 code units only after validation.
-- Pass the buffer through LibUTF UTF-32 decode paths.
+- Pass the buffer through SuiteUTF UTF-32 decode paths.
 - Reject or report invalid scalar values explicitly.
 
 Even with 32-bit wchar_t, decoding and validation remain important.
@@ -135,7 +135,7 @@ Even with 32-bit wchar_t, decoding and validation remain important.
 
 In all cases:
 
-- Decode wchar_t buffers into Unicode scalar values using LibUTF.
+- Decode wchar_t buffers into Unicode scalar values using SuiteUTF.
 - Perform iteration, counting, and transformation on decoded values.
 - Re-encode explicitly to the desired output encoding.
 
@@ -147,7 +147,7 @@ intentional and visible.
 wchar_t data often originates at platform or API boundaries, where encoding
 assumptions and data quality are not always under the program's control.
 
-LibUTF provides two layers that can both be used for wchar_t decoding, depending
+SuiteUTF provides two layers that can both be used for wchar_t decoding, depending
 on intent.
 
 ### utf_toolkit
@@ -180,12 +180,12 @@ A practical summary of handling strategies is as follows:
 
 - sizeof(wchar_t) == 2
   - Treat as UTF-16 code units.
-  - Decode using LibUTF UTF-16 paths.
+  - Decode using SuiteUTF UTF-16 paths.
   - Handle surrogate pairs during decoding.
 
 - sizeof(wchar_t) == 4
   - Treat as UTF-32 code units after validation.
-  - Decode using LibUTF UTF-32 paths.
+  - Decode using SuiteUTF UTF-32 paths.
   - Reject or report invalid scalar values.
 
 In all cases:

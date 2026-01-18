@@ -1,6 +1,6 @@
 # File: docs/utf/std_overview.md
 
-# LibUTF std layer overview
+# SuiteUTF std layer overview
 
 The utf_std layer provides a small, strict, standards-aligned interface for
 working with UTF encodings and a small set of related 8-bit encodings.
@@ -131,7 +131,7 @@ and width of wchar_t are implementation-defined and vary by platform.
 Passing wchar_t buffers directly to utf_std functions without an explicit
 understanding of their encoding can lead to incorrect results.
 
-For guidance on safely handling wchar_t and integrating it with LibUTF,
+For guidance on safely handling wchar_t and integrating it with SuiteUTF,
 see docs/utf/wchar_t_guidance.md.
 
 ### UTF_OTHER_TYPE

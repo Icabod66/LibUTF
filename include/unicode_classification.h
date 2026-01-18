@@ -1,5 +1,5 @@
 
-//  LibUTF
+//  SuiteUTF
 //  Original design 2010–2016; maintained and extended 2024–2025.
 //  Copyright (c) 2010–2025 Ritchie Brannan.
 //  MIT License. See LICENSE.txt. Project history: docs/History.md.
@@ -24,7 +24,7 @@ namespace unicode
 
 // ==== unicode general classification functions ====
 bool isBOM(const unicode_t unicode) noexcept;               //! a byte order mark
-bool isUnicode(const unicode_t unicode) noexcept;           //! valid unicode
+bool isUnicode(const unicode_t unicode) noexcept;           //! valid unicode (Rune compatible)
 bool isCharacter(const unicode_t unicode) noexcept;         //! a character
 bool isNonCharacter(const unicode_t unicode) noexcept;      //! a non-character
 bool isCombining(const unicode_t unicode) noexcept;         //! a combining character

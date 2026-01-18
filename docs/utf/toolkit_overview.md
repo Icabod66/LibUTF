@@ -1,8 +1,8 @@
 # File: docs/utf/toolkit_overview.md
 
-# LibUTF toolkit layer overview (utf_toolkit.h)
+# SuiteUTF toolkit layer overview (utf_toolkit.h)
 
-The LibUTF toolkit layer (`unicode::utf::toolkit`) provides robust,
+The SuiteUTF toolkit layer (`unicode::utf::toolkit`) provides robust,
 configurable UTF code-point processing for real-world data. It is designed
 for low-level use: allocation-free, exception-free, and explicit about buffer
 boundaries.
@@ -73,7 +73,7 @@ assumed to represent a specific Unicode encoding.
 When wchar_t data must be processed, the utf_toolkit layer is generally
 the safer choice due to its explicit validation and diagnostic reporting.
 
-Detailed guidance on handling wchar_t with LibUTF can be found in
+Detailed guidance on handling wchar_t with SuiteUTF can be found in
 docs/utf/wchar_t_guidance.md.
 
 ## Core data model: utf_text

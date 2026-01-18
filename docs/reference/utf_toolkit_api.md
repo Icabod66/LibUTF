@@ -1,8 +1,8 @@
 File: docs/reference/utf_toolkit_api.md
 
-# LibUTF toolkit API reference (utf_toolkit.h)
+# SuiteUTF toolkit API reference (utf_toolkit.h)
 
-This document is a reference for the public API provided by the LibUTF
+This document is a reference for the public API provided by the SuiteUTF
 toolkit layer, declared in `unicode::utf::toolkit`.
 
 It lists public types, enums, interfaces, and free functions, grouped by

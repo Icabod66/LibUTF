@@ -1,5 +1,5 @@
 
-//  LibUTF
+//  SuiteUTF
 //  Original design 2010–2016; maintained and extended 2024–2025.
 //  Copyright (c) 2010–2025 Ritchie Brannan.
 //  MIT License. See LICENSE.txt. Project history: docs/History.md.
@@ -25,7 +25,7 @@ bool isBOM(const unicode_t unicode) noexcept
 	return unicode == 0xfeffu;
 }
 
-//! determine if a unicode code-point is valid
+//! determine if a unicode code-point is valid (a Rune)
 bool isUnicode(const unicode_t unicode) noexcept
 {
 	return (static_cast<uint32_t>(unicode) <= 0x0010ffffu) && ((unicode & 0xfffff800u) != 0xd800u);

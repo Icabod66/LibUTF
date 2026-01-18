@@ -3,13 +3,13 @@
 # utf_helpers.h
 
 This header provides small, inline, constexpr helpers that are exposed as a
-courtesy to users of LibUTF.
+courtesy to users of SuiteUTF.
 
-None of the other headers or implementation files in LibUTF depend on or
+None of the other headers or implementation files in SuiteUTF depend on or
 reference utf_helpers.h directly. Instead, these functions are provided because
 they fit naturally within the same conceptual framework as the rest of the
 library and have proven useful when writing higher-level code that works with
-byte streams, text decoding, or encoding detection alongside LibUTF.
+byte streams, text decoding, or encoding detection alongside SuiteUTF.
 
 Links:
 - docs/utf/toolkit_overview.md
@@ -18,8 +18,8 @@ Links:
 
 ## Purpose and scope
 
-utf_helpers.h exists to support upstream code that uses LibUTF, rather than to
-support LibUTF's own internal implementation.
+utf_helpers.h exists to support upstream code that uses SuiteUTF, rather than to
+support SuiteUTF's own internal implementation.
 
 It provides small, fast helpers that answer local, byte-level questions such as:
 
@@ -32,7 +32,7 @@ It provides small, fast helpers that answer local, byte-level questions such as:
 - Could this byte appear in a given position of a multi-byte sequence?
 
 These helpers are intended to be composed by user code when building scanners,
-decoders, validators, or heuristics that sit above LibUTF.
+decoders, validators, or heuristics that sit above SuiteUTF.
 
 They intentionally operate at a lower semantic level than the toolkit decode
 functions and do not apply full encoding validity or policy rules. Where these
@@ -74,7 +74,7 @@ All functions are inline constexpr and noexcept.
 
     inline constexpr bool isLeadUTF8(uint8_t byte) noexcept;
 
-Returns true when the byte is a plausible UTF-8 lead byte under LibUTF's rules:
+Returns true when the byte is a plausible UTF-8 lead byte under SuiteUTF's rules:
 
 - It must not be a continuation byte (i.e. not 0x80..0xBF).
 - It must be less than 0xFE (so 0xFE and 0xFF are not treated as leads).
@@ -125,7 +125,7 @@ Behavior summary:
 Extended UTF-8 behavior:
 
 This helper intentionally recognizes extended UTF-8 lead bytes and lengths
-beyond modern standard UTF-8. These forms are part of the LibUTF toolkit
+beyond modern standard UTF-8. These forms are part of the SuiteUTF toolkit
 diagnostic and indexing model and are not indicators of valid UTF-8 text; see
 docs/utf/overlong_utf8.md for how extended lengths and overlong forms are
 interpreted by the toolkit layer.
@@ -268,7 +268,7 @@ Returns true if byte0 is:
 
 ## Typical usage patterns
 
-These helpers are typically used in upstream code that sits alongside LibUTF,
+These helpers are typically used in upstream code that sits alongside SuiteUTF,
 for example:
 
 - fast scanning or classification of byte streams,

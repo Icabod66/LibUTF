@@ -1,8 +1,8 @@
 # File: docs/utf/handlers_usage.md
 
-# LibUTF Handler-Based APIs (IUTF and IUTFTK)
+# SuiteUTF Handler-Based APIs (IUTF and IUTFTK)
 
-This document describes how to use the handler-based APIs in LibUTF:
+This document describes how to use the handler-based APIs in SuiteUTF:
 
 - unicode::utf::std::IUTF
 - unicode::utf::toolkit::IUTFTK

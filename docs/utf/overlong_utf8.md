@@ -1,6 +1,6 @@
 # File: docs/utf/overlong_utf8.md
 
-# Overlong UTF-8 in LibUTF (toolkit)
+# Overlong UTF-8 in SuiteUTF (toolkit)
 
 ## Purpose and scope
 
@@ -11,7 +11,7 @@ Example idea (not exact bytes here):
 - U+0041 ('A') normally fits in 1 byte.
 - An overlong form encodes the same value using 2 or more bytes.
 
-LibUTF explicitly supports detecting and intentionally emitting overlong
+SuiteUTF explicitly supports detecting and intentionally emitting overlong
 UTF-8 forms as part of its toolkit goals:
 - diagnostics and forensic analysis of malformed or non-conformant data
 - controlled repair and transcoding workflows
@@ -31,7 +31,7 @@ byte consumption proceeds is defined by the selected `UTF_SUB_TYPE`; see
 docs/utf/toolkit_overview.md and docs/utf/variants_utf_sub_type.md.
 
 Notes:
-- LibUTF distinguishes Java-style modified UTF-8 (the 2-byte encoding of
+- SuiteUTF distinguishes Java-style modified UTF-8 (the 2-byte encoding of
   U+0000) from other overlong forms.
 - The flags `cp_errors::bits::ModifiedUTF8` and
   `cp_errors::bits::OverlongUTF8` are mutually exclusive. Both must be
@@ -43,9 +43,9 @@ Cross-links:
 - docs/utf/cp_errors.md
 
 
-## Overlong encodings in LibUTF
+## Overlong encodings in SuiteUTF
 
-LibUTF defines "overlong" in practical, encoding-centric terms.
+SuiteUTF defines "overlong" in practical, encoding-centric terms.
 
 Given:
 - `bytes`: the UTF-8 length being used (1 to 6 supported by the toolkit)
@@ -54,7 +54,7 @@ Given:
 An encoding is considered overlong when:
 - `bytes > 1`, and
 - the decoded value fits in fewer bits than are available for that `bytes`
-  count under LibUTF's UTF-8 bit-capacity model.
+  count under SuiteUTF's UTF-8 bit-capacity model.
 
 This model is shared across helpers and encode/decode paths:
 - `bitCountUTF8(bytes)` computes the number of value bits available for a
@@ -63,7 +63,7 @@ This model is shared across helpers and encode/decode paths:
   represented using a shorter encoding length.
 
 Special case: Java-style NULL (modified UTF-8)
-- If `unicode == 0` and `bytes == 2`, LibUTF flags this as
+- If `unicode == 0` and `bytes == 2`, SuiteUTF flags this as
   `cp_errors::bits::ModifiedUTF8`.
 - All other cases where the value is too small for the chosen `bytes`
   length are flagged as `cp_errors::bits::OverlongUTF8`.
@@ -87,7 +87,7 @@ In summary:
 ### isOverlongUTF8(unicode, bytes)
 
 `isOverlongUTF8(unicode, bytes)` is a fast predicate that reports whether a
-given `(unicode, bytes)` pair is overlong under LibUTF's bit-capacity model.
+given `(unicode, bytes)` pair is overlong under SuiteUTF's bit-capacity model.
 
 Important points:
 - The helper tests only the size relationship between the value and the
@@ -134,7 +134,7 @@ docs/utf/cp_errors.md for the shared decode-failure semantics.
 
 ## Indexing model
 
-LibUTF defines an "overlong index" to provide a compact and stable identifier
+SuiteUTF defines an "overlong index" to provide a compact and stable identifier
 for overlong UTF-8 encodings.
 
 The index maps a `(unicode, bytes)` pair to a unique integer using
@@ -142,7 +142,7 @@ The index maps a `(unicode, bytes)` pair to a unique integer using
 
 ### Conceptual model
 
-LibUTF defines overlong encodings using a generalized UTF-8 model based on
+SuiteUTF defines overlong encodings using a generalized UTF-8 model based on
 lead-byte classification, continuation-byte structure, and the number of
 value bits available for a given encoding length. This model is applied
 uniformly to 2- through 6-byte forms, including extended 5- and 6-byte
@@ -160,7 +160,7 @@ Unicode interchange encodings.
 
 The overlong index space is therefore a complete enumeration of all
 `(unicode, bytes)` pairs that fit within this generalized model while using
-a longer-than-minimal encoding length. The index reflects LibUTF's internal
+a longer-than-minimal encoding length. The index reflects SuiteUTF's internal
 representation and diagnostic needs, rather than any external conformance
 criteria.
 
@@ -199,10 +199,10 @@ maximum encodable overlong index of 0x0421087f.
 ### Meaningful vs reserved indices
 
 - Index 0 corresponds to the Java-style 2-byte encoding of U+0000.
-- All other indices are unassigned by LibUTF and are available for
+- All other indices are unassigned by SuiteUTF and are available for
   application-defined or diagnostic use.
 
-LibUTF does not attach standardized semantics to indices beyond 0. Any use
+SuiteUTF does not attach standardized semantics to indices beyond 0. Any use
 of additional indices should be treated as private to the application or
 pipeline.
 

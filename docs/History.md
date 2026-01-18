@@ -1,12 +1,12 @@
-# LibUTF - Project History
+# SuiteUTF - Project History
 
-This document records the development history of the LibUTF library and related
+This document records the development history of the SuiteUTF library and related
 components, including later refactoring and documentation work. It is intended
 as a factual record rather than a retrospective justification.
 
 ## Early development
 
-LibUTF started life as just a couple of files with a few functions to read basic
+SuiteUTF started life as just a couple of files with a few functions to read basic
 UTF-8 files which were the foundation for a number of parsers in a much larger
 game engine codebase. Over time it evolved to become more comprehensive and add
 error checking and diagnostics as some of the files I had produced had encoding
@@ -15,7 +15,7 @@ legacy documentation from the internet that contained invalid encodings.
 
 It continued expanding over a number of years becoming close to what it is now.
 
-LibUTF was never intended to be a higher level library with heavy Unicode
+SuiteUTF was never intended to be a higher level library with heavy Unicode
 manipulation, text processing, font awareness, locale awareness and the like,
 and it still isn't.
 
@@ -48,7 +48,7 @@ well formed utf.
 
 From about mid-2016 the library saw little active development. The code remained
 in use, but largely unchanged, and accumulated alongside other utilities in a
-larger codebase. Over time, some functionality accreted into LibUTF that was not
+larger codebase. Over time, some functionality accreted into SuiteUTF that was not
 strictly part of its original remit.
 
 Although the code continued to work, familiarity with the original design
@@ -74,10 +74,10 @@ is interested, more details can be found at www.morphicvoid.com.
 
 ## Refactoring and validation with AI assistance
 
-As understanding improved, attention narrowed to the LibUTF directory itself.
+As understanding improved, attention narrowed to the SuiteUTF directory itself.
 AI tools were used to help identify code that had accreted into the library over
 time but no longer belonged there. This led to a small refactor that moved such
-code to more appropriate locations and left a cleaner, more coherent LibUTF
+code to more appropriate locations and left a cleaner, more coherent SuiteUTF
 structure.
 
 During this phase, AI was also used as a reviewer to help reason about original

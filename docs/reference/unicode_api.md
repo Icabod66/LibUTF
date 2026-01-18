@@ -1,6 +1,6 @@
 # File: docs/reference/unicode_api.md
 
-# LibUTF Unicode basics API reference
+# SuiteUTF Unicode basics API reference
 
 This document describes the public API of the Unicode basics layer as declared in:
 

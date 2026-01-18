@@ -22,15 +22,15 @@ fits your needs.
 
 - If you need to encode or decode UTF data strictly according to the relevant
   standard, with any deviation treated as failure,
-  use LibUTF through the utf_std interfaces.
+  use SuiteUTF through the utf_std interfaces.
 
 - If you need the same strict behavior but also want access to detailed
   diagnostic information,
-  use LibUTF through the strict sub-types provided by utf_toolkit.
+  use SuiteUTF through the strict sub-types provided by utf_toolkit.
 
 - If you need to encode or decode legacy, non-standard, or custom UTF forms, or
   require controlled permissiveness and recovery,
-  use LibUTF through the permissive utf_toolkit sub-types or free functions.
+  use SuiteUTF through the permissive utf_toolkit sub-types or free functions.
 
 - If you need high-level Unicode algorithms such as collation, normalization, or
   locale-aware text processing,

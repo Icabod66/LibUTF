@@ -7,8 +7,11 @@
 A rune is a Unicode scalar value: any value in the range U+0000 to U+10FFFF,
 excluding the surrogate range U+D800 to U+DFFF.
 
-This document is a brief guide to how LibUTF encoders and decoders relate to
+This document is a brief guide to how SuiteUTF encoders and decoders relate to
 runes (valid Unicode scalar values).
+
+Within SuiteUTF, a strict Rune is a Unicode value that conforms to the Rune
+definition and originates from or targets only strict UTF encoding.
 
 ## utf_std rune behavior
 
