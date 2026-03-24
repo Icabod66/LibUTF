@@ -22,11 +22,9 @@ Makefile
 
 # Visual Studio
 .vs/
-*.sln
+*.user
+*.sou
 *.sln.docstates
-*.vcxproj
-*.vcxproj.user
-*.vcxproj.filters
 
 # Visual Studio build output
 x64/

@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="git">
+      <UniqueIdentifier>{cb3432ec-4bce-4d7e-8b44-0fd2eb2d2bb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="docs">
+      <UniqueIdentifier>{66b50ed0-a43c-472b-97c2-833bde99a1bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{f675804d-99fe-44b8-b0fc-55103724022c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="docs\reference">
+      <UniqueIdentifier>{1dbfa006-6b01-43c0-a6b8-c2b7e3e56d24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="docs\unicode">
+      <UniqueIdentifier>{b64a1a11-4a0e-4537-b4b4-8057ab061264}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="docs\utf">
+      <UniqueIdentifier>{a3341b78-e323-4712-954c-8364afbe5b4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="docs\util">
+      <UniqueIdentifier>{e6c53e4e-dbdc-454d-9b9f-d310e04083fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{759000a1-2150-4305-b7dc-4a94be010729}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="docs\not_for_redistribution">
+      <UniqueIdentifier>{42408af6-78de-443b-88da-11119f29a984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\not_for_redistribution">
+      <UniqueIdentifier>{8f7dff44-5aa4-4ab2-9d19-5e4e5e83b0f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\not_for_redistribution">
+      <UniqueIdentifier>{7d0a6174-5664-4e06-ae45-a4f416c5f299}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\not_for_redistribution">
+      <UniqueIdentifier>{831311fe-8f09-4814-9bcb-5a18929444dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="docs\comparisons">
+      <UniqueIdentifier>{6d21ba64-dec0-43c3-a8f3-026c8f5074cc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="docs\reference\unicode_api.md">
+      <Filter>docs\reference</Filter>
+    </None>
+    <None Include="docs\reference\utf_std_api.md">
+      <Filter>docs\reference</Filter>
+    </None>
+    <None Include="docs\reference\utf_toolkit_api.md">
+      <Filter>docs\reference</Filter>
+    </None>
+    <None Include="docs\unicode\unicode_overview.md">
+      <Filter>docs\unicode</Filter>
+    </None>
+    <None Include="docs\utf\cp_errors.md">
+      <Filter>docs\utf</Filter>
+    </None>
+    <None Include="docs\utf\handlers_usage.md">
+      <Filter>docs\utf</Filter>
+    </None>
+    <None Include="docs\utf\overlong_utf8.md">
+      <Filter>docs\utf</Filter>
+    </None>
+    <None Include="docs\utf\std_overview.md">
+      <Filter>docs\utf</Filter>
+    </None>
+    <None Include="docs\utf\toolkit_overview.md">
+      <Filter>docs\utf</Filter>
+    </None>
+    <None Include="docs\utf\utf_helpers.md">
+      <Filter>docs\utf</Filter>
+    </None>
+    <None Include="docs\utf\variants_utf_sub_type.md">
+      <Filter>docs\utf</Filter>
+    </None>
+    <None Include="docs\util\text_hash.md">
+      <Filter>docs\util</Filter>
+    </None>
+    <None Include=".gitignore">
+      <Filter>git</Filter>
+    </None>
+    <None Include="README.md" />
+    <None Include="docs\EncodingFamily_Template.md">
+      <Filter>docs</Filter>
+    </None>
+    <None Include="docs\History.md">
+      <Filter>docs</Filter>
+    </None>
+    <None Include="docs\README.md">
+      <Filter>docs</Filter>
+    </None>
+    <None Include="docs\not_for_redistribution\EncodingFamily_Template.md">
+      <Filter>docs\not_for_redistribution</Filter>
+    </None>
+    <None Include="docs\utf\wchar_t_guidance.md">
+      <Filter>docs\utf</Filter>
+    </None>
+    <None Include="docs\utf\tinyutf8_comparison.md">
+      <Filter>docs\utf</Filter>
+    </None>
+    <None Include="docs\comparisons\tinyutf8_comparison.md">
+      <Filter>docs\comparisons</Filter>
+    </None>
+    <None Include="docs\utf\choosing_a_utf_library.md">
+      <Filter>docs\utf</Filter>
+    </None>
+    <None Include="docs\utf\when_to_use_suite_utf.md">
+      <Filter>docs\utf</Filter>
+    </None>
+    <None Include="docs\utf\rune_handling.md">
+      <Filter>docs\utf</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="LICENSE.txt" />
+    <Text Include="test\not_for_redistribution\UTF-8-test.txt">
+      <Filter>test\not_for_redistribution</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\suite_utf.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\text_hash.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\unicode_classification.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\unicode_type.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\unicode_utilities.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\utf_helpers.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\utf_std.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\utf_toolkit.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\text_hash.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\unicode_classification.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\unicode_utilities.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utf_std.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utf_toolkit.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\not_for_redistribution\suite_utf.cpp">
+      <Filter>src\not_for_redistribution</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
