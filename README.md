@@ -15,7 +15,7 @@ work focuses on documentation, structural clarity, and consolidation of
 long-standing design decisions.
 
 SuiteUTF is provided as a reference-quality implementation and is not intended to
-be a full-spectrum Unicode or internationalisation solution.
+be a full Unicode or internationalisation solution.
 
 ---
 
@@ -197,6 +197,10 @@ A more detailed project history and revision narrative can be found in
 
 ---
 
-## Licence
+## License
 
-SuiteUTF is released under the MIT License. See `LICENSE.txt` for details.
+Licensed under the MIT License. See the LICENSE file for details.
+
+Copyright (c) 2010-2025 Ritchie Brannan.
+
+Attribution is appreciated where practical.
