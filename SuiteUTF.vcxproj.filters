@@ -165,8 +165,5 @@
     <ClCompile Include="src\utf_toolkit.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\not_for_redistribution\suite_utf.cpp">
-      <Filter>src\not_for_redistribution</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

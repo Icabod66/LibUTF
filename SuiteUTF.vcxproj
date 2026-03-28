@@ -168,7 +168,6 @@
     <ClInclude Include="include\utf_toolkit.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\not_for_redistribution\suite_utf.cpp" />
     <ClCompile Include="src\text_hash.cpp" />
     <ClCompile Include="src\unicode_classification.cpp" />
     <ClCompile Include="src\unicode_utilities.cpp" />
